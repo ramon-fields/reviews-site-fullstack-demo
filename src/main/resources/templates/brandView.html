@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+    <title>Nike Brands : Running Woman</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/layout.css" rel="stylesheet">
+</head>
+
+<body>
+<section>
+    <h1 class="brand-details__title" th:text="${brand.title}">Running Woman</h1>
+    <h2 class="brand-details__designer" th:each="designer: ${brand.designers}"
+        th:text="${designer.firstName}+' '+ ${designer.lastName}">Guga Bigvava</h2>
+    <p class="brand-details__summary" th:text="${brand.description}">
+        Art created to display a woman in motion.
+    </p>
+</section>
+<form th:action="'/brand/' + ${brand.id} + '/add-hashtag'" method="POST">
+    <input name = "hashTagName" type="text">
+    <button type="submit">Add Hashtag</button>
+</form>
+
+<a class="nav__home" th:href="'/divisions/'+${brand.division.type}">back to brands</a>
+</body>
+
+</html>

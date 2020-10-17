@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+    <title>Divisions</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/layout.css" rel="stylesheet">
+</head>
+
+<body>
+<h1>Nike Libraries</h1><br>
+    <ul>
+        <li th:each="division:${divisions}"><a th:href="@{'/divisions/'+ ${division.type}}"
+                                    th:text="${division.type}">Division</a>
+        </li>
+    </ul><br>
+<form action="add-division" method="POST">
+    <input name="type" type="text">
+    <button type="submit">Add Division</button>
+</form>
+</body>
+
+</html>
