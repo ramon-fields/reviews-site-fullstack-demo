@@ -15,7 +15,6 @@ public class Designer {
     private Long id;
     private String firstName;
     private String lastName;
-    private String images;
     @ManyToMany(mappedBy = "designers")
     private java.util.Collection<Brand> brands;
 
@@ -40,14 +39,9 @@ public class Designer {
         return lastName;
     }
 
-    public String getImages() {
-        return images;
-    }
-
     public Designer(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.images = images;
     }
 
     @Override

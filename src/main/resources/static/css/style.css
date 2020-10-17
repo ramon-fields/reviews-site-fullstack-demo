@@ -5,18 +5,15 @@
 
 h1 {
     font-size: 2rem;
+    color: cyan;
 }
 
 h2 {
     font-size: 1.5rem;
 }
 
-/*ul {*/
-/*    list-style: none;*/
-/*}*/
-
 body {
-    background-image: url("/images/nikeshoebackground.png");
+   background-image: url("/images/nikeshoebackground.png");
 }
 
 

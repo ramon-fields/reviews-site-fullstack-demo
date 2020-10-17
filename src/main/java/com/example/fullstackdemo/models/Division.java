@@ -14,7 +14,6 @@ public class Division {
     @GeneratedValue
     private Long id;
     private String type;
-    private String images;
     @OneToMany(mappedBy = "division")
     private Collection<Brand> brands;
 
@@ -24,10 +23,6 @@ public class Division {
 
     public String getType() {
         return type;
-    }
-
-    public String getImages() {
-        return images;
     }
 
     public Collection<Brand> getBrands() {
@@ -41,7 +36,6 @@ public class Division {
 
     public Division(String type) {
         this.type = type;
-        this.images = images;
     }
 
     @Override

@@ -7,15 +7,17 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
     <title>Nike Brands : Running Woman</title>
-    <link href="./css/style.css" rel="stylesheet">
-    <link href="./css/layout.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/layout.css" rel="stylesheet">
 </head>
 
 <body>
 <section>
     <h1 class="brand-details__title" th:text="${brand.title}">Running Woman</h1>
     <h2 class="brand-details__designer" th:each="designer: ${brand.designers}"
-        th:text="${designer.firstName}+' '+ ${designer.lastName}">Guga Bigvava</h2>
+        th:text="${designer.firstName}+' '+ ${designer.lastName}">Guga Bigvava
+    </h2>
+    <h3><img th:src="${brand.images}"></h3>
     <p class="brand-details__summary" th:text="${brand.description}">
         Art created to display a woman in motion.
     </p>
